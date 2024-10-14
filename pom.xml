@@ -1,67 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- Define the Maven project model version -->
 	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Parent project configuration, inheriting properties from Spring Boot -->
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.10</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<groupId>org.springframework.boot</groupId> <!-- Group ID for the parent project -->
+		<artifactId>spring-boot-starter-parent</artifactId> <!-- Artifact ID for the Spring Boot starter parent -->
+		<version>3.2.10</version> <!-- Version of the Spring Boot parent -->
+		<relativePath/> <!-- Optional path to parent, lookup from repository if not specified -->
 	</parent>
-	<groupId>com.spring-boot-3-2-10</groupId>
-	<artifactId>fullstack-backend</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>fullstack-backend</name>
-	<description>backend using Spring Boot</description>
-	<url/>
+
+	<!-- Group, artifact, and version identifiers for this project -->
+	<groupId>com.spring-boot-3-2-10</groupId> <!-- Group ID for the project -->
+	<artifactId>fullstack-backend</artifactId> <!-- Artifact ID for the project -->
+	<version>0.0.1-SNAPSHOT</version> <!-- Version of the project (SNAPSHOT means it's a work in progress) -->
+	<name>fullstack-backend</name> <!-- Name of the project -->
+	<description>backend using Spring Boot</description> <!-- Description of the project -->
+	<url/> <!-- URL of the project, if any -->
+
+	<!-- Licensing information -->
 	<licenses>
-		<license/>
+		<license/> <!-- License of the project (should be specified for open-source projects) -->
 	</licenses>
+
+	<!-- Developer information -->
 	<developers>
-		<developer/>
+		<developer/> <!-- Information about developers contributing to the project -->
 	</developers>
+
+	<!-- Source Control Management (SCM) details -->
 	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
+		<connection/> <!-- SCM connection URL -->
+		<developerConnection/> <!-- Developer SCM connection URL -->
+		<tag/> <!-- SCM tag information -->
+		<url/> <!-- URL to the SCM repository -->
 	</scm>
+
+	<!-- Define project properties -->
 	<properties>
-		<java.version>17</java.version>
+		<java.version>17</java.version> <!-- Java version to use for the project -->
 	</properties>
+
+	<!-- Project dependencies -->
 	<dependencies>
 		<dependency>
-			<groupId>jakarta.persistence</groupId>
-			<artifactId>jakarta.persistence-api</artifactId>
-			<version>3.1.0</version>
+			<groupId>jakarta.persistence</groupId> <!-- Group ID for Jakarta Persistence -->
+			<artifactId>jakarta.persistence-api</artifactId> <!-- Artifact ID for the Jakarta Persistence API -->
+			<version>3.1.0</version> <!-- Version of Jakarta Persistence API -->
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<groupId>org.springframework.boot</groupId> <!-- Group ID for Spring Boot -->
+			<artifactId>spring-boot-starter-data-jpa</artifactId> <!-- Spring Boot starter for JPA -->
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.springframework.boot</groupId> <!-- Group ID for Spring Boot -->
+			<artifactId>spring-boot-starter-web</artifactId> <!-- Spring Boot starter for building web applications -->
 		</dependency>
 
 		<dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
+			<groupId>com.mysql</groupId> <!-- Group ID for MySQL connector -->
+			<artifactId>mysql-connector-j</artifactId> <!-- MySQL connector for Java -->
+			<scope>runtime</scope> <!-- Dependency is only needed at runtime -->
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<groupId>org.springframework.boot</groupId> <!-- Group ID for Spring Boot -->
+			<artifactId>spring-boot-starter-test</artifactId> <!-- Spring Boot starter for testing -->
+			<scope>test</scope> <!-- Dependency is only needed for testing -->
 		</dependency>
 	</dependencies>
 
+	<!-- Build configuration -->
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.springframework.boot</groupId> <!-- Group ID for Spring Boot -->
+				<artifactId>spring-boot-maven-plugin</artifactId> <!-- Maven plugin for Spring Boot -->
 			</plugin>
 		</plugins>
 	</build>
